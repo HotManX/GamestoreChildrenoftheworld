@@ -3,30 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <!--<group android:checkableBehavior="single">-->
+    <group>
         <item
             android:id="@+id/nav_tt"
-            android:icon="@drawable/ic_menu_game"
             android:title="Тяни-толкай" />
         <item
             android:id="@+id/nav_pikt"
-            android:icon="@drawable/ic_menu_game"
             android:title="Пиктограф" />
         <item
             android:id="@+id/nav_pm"
-            android:icon="@drawable/ic_menu_game"
             android:title="Пойми меня" />
         <item
             android:id="@+id/nav_mk"
-            android:icon="@drawable/ic_menu_game"
             android:title="Мульт-контакт" />
         <item
             android:id="@+id/nav_rech"
-            android:icon="@drawable/ic_menu_game"
             android:title="Речедром" />
         <item
             android:id="@+id/nav_gen"
-            android:icon="@drawable/ic_menu_game"
             android:title="Генератор историй"/>
     </group>
 
@@ -38,7 +33,6 @@
                 android:title="Share" />-->
             <item
                 android:id="@+id/nav_about"
-                android:icon="@drawable/ic_menu_info"
                 android:title="О приложении" />
         </menu>
     </item>
