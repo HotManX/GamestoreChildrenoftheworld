@@ -1,5 +1,7 @@
 package ru.sgti.gamestore;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.PorterDuff;
@@ -144,14 +146,24 @@ public class _MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Вы действительно хотите выйти?");
+            builder.setPositiveButton("Нет", null);
+            builder.setNegativeButton("Да", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    //super.onBackPressed();
+                    finish();
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.drawer, menu);
+        getMenuInflater().inflate(R.menu.activity_main_menu, menu);
         return true;
     }
 
@@ -164,7 +176,7 @@ public class _MainActivity extends AppCompatActivity
 
             //noinspection SimplifiableIfStatement
             case R.id.action_exit:
-                Toast.makeText(this, "Yep", Toast.LENGTH_SHORT).show();
+                onBackPressed();
                 return true;
 
             default:

@@ -137,7 +137,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:src="@android:color/transparent"
-                    android:background="@drawable/cborder"/>
+                    android:scaleType="fitXY"
+                    android:background="@drawable/cborder_left"/>
 
                 <ImageView
                     android:id="@+id/imageView2"
@@ -145,7 +146,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:src="@android:color/transparent"
-                    android:background="@drawable/cborder"/>
+                    android:scaleType="fitXY"
+                    android:background="@drawable/cborder_middle"/>
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -153,7 +155,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:src="@android:color/transparent"
-                    android:background="@drawable/cborder"/>
+                    android:scaleType="fitXY"
+                    android:background="@drawable/cborder_middle"/>
 
                 <ImageView
                     android:id="@+id/imageView4"
@@ -161,7 +164,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:src="@android:color/transparent"
-                    android:background="@drawable/cborder"/>
+                    android:scaleType="fitXY"
+                    android:background="@drawable/cborder_middle"/>
 
                 <ImageView
                     android:id="@+id/imageView5"
@@ -169,7 +173,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:src="@android:color/transparent"
-                    android:background="@drawable/cborder"/>
+                    android:scaleType="fitXY"
+                    android:background="@drawable/cborder_middle"/>
 
                 <ImageView
                     android:id="@+id/imageView6"
@@ -177,7 +182,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:src="@android:color/transparent"
-                    android:background="@drawable/cborder"/>
+                    android:scaleType="fitXY"
+                    android:background="@drawable/cborder_right"/>
 
                 <Space
                     android:layout_width="wrap_content"

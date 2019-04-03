@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_new"
+        android:orderInCategory="100"
+        android:title="Новая игра"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_show"
+        android:orderInCategory="100"
+        android:title="Открыть картинки"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_hide"
+        android:orderInCategory="100"
+        android:title="Скрыть картинки"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="100"
+        android:title="Об игре"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="100"
+        android:title="Выйти из игры"
+        app:showAsAction="never" />
+</menu>
