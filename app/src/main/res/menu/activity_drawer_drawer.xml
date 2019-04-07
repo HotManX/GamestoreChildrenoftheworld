@@ -33,7 +33,7 @@
                 android:title="Share" />-->
             <item
                 android:id="@+id/nav_about"
-                android:title="О приложении" />
+                android:title="@string/action_about" />
         </menu>
     </item>
 

@@ -1,11 +1,13 @@
 package ru.sgti.gamestore;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -19,6 +21,8 @@ import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class _MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -162,19 +166,19 @@ public class _MainActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.activity_main_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
 
-            //noinspection SimplifiableIfStatement
+            case R.id.action_about:
+                Intent about = new Intent(_MainActivity.this, AboutActivity.class);
+                startActivity(about);
+                return true;
+
             case R.id.action_exit:
                 onBackPressed();
                 return true;
@@ -243,5 +247,18 @@ public class _MainActivity extends AppCompatActivity
                 return false;
             }
         });
+    }
+
+    public void Toast(Context ctx, String text) {
+        final Toast toast = Toast.makeText(ctx, text, Toast.LENGTH_SHORT);
+        toast.show();
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                toast.cancel();
+            }
+        }, 1000);
     }
 }

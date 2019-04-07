@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:name=".AboutActivity"
-            android:label="О приложении" />
+            android:label="@string/action_about" />
         <activity
             android:name=".TT_1Activity"
             android:label="Тяни-толкай" />
@@ -38,7 +38,10 @@
             android:label="Речедром" />
         <activity
             android:name=".Gen_1Activity"
-            android:label="Генератор историй"/>
+            android:label="Генератор историй" />
+        <activity
+            android:name=".AboutGameActivity"
+            android:label="Об игре" />
     </application>
 
 </manifest>

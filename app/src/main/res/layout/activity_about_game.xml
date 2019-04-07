@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Rech_1Activity">
+    tools:context=".AboutGameActivity" >
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -18,14 +18,20 @@
             android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="#fff">
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:isScrollContainer="false"
+            android:fillViewport="true">
 
-
-        </LinearLayout>
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"/>
+        </ScrollView>
 
     </android.support.design.widget.AppBarLayout>
 

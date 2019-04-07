@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@color/colorAccent">
+            android:background="#fff">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -111,10 +111,28 @@
                 android:layout_weight="0.5"
                 android:background="@drawable/cborder">
 
-                <Space
+                <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight=".5" />
+                    android:layout_weight="0.01" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:paddingTop="20dp"
+                        android:text=""
+                        android:textColor="#000" />
+
+                    <Button android:theme="@style/PurpleButton"
+                        android:id="@+id/Btn1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:paddingBottom="20dp"
+                        android:text="Подсказка" />
+                </FrameLayout>
 
                 <ImageView
                     android:id="@+id/imageView1"
@@ -134,10 +152,28 @@
                     android:scaleType="fitXY"
                     android:background="@drawable/cborder_right"/>
 
-                <Space
+                <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.5" />
+                    android:layout_weight="0.01" >
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:paddingTop="20dp"
+                        android:text=""
+                        android:textColor="#000" />
+
+                    <Button android:theme="@style/PurpleButton"
+                        android:id="@+id/Btn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:paddingBottom="20dp"
+                        android:text="Описание" />
+                </FrameLayout>
 
             </LinearLayout>
 
