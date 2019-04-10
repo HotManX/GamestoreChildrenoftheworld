@@ -1,5 +1,7 @@
 package ru.sgti.gamestore;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
@@ -332,7 +334,7 @@ public class PM_1Activity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                finish();
+                _finish();
                 return true;
 
             case R.id.action_new:
@@ -362,9 +364,21 @@ public class PM_1Activity extends AppCompatActivity {
                 return true;
 
             case R.id.action_exit:
-                finish();
+                _finish();
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    private void _finish() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Вы действительно хотите выйти из игры?");
+        builder.setPositiveButton("Нет", null);
+        builder.setNegativeButton("Да", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                finish();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }

@@ -22,8 +22,6 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 public class _MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
