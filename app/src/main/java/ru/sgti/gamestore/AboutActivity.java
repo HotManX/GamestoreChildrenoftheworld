@@ -7,7 +7,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class AboutActivity extends AppCompatActivity {
 
@@ -30,7 +29,7 @@ public class AboutActivity extends AppCompatActivity {
         String versionName = BuildConfig.VERSION_NAME;
 
         TextView textView = (TextView) findViewById(R.id.textVersion);
-        textView.setText(versionCode + " " + versionName);
+        textView.setText("Версия приложения: " + versionName);
     }
 
     @Override

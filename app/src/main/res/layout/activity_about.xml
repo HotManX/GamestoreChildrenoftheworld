@@ -44,7 +44,8 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="20dp"
                         android:paddingTop="10dp"
-                        android:text="@string/nav_header_title"
+                        android:textSize="18dp"
+                        android:text="Екатерина Львовна Кудрявцева"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                         android:textColor="#000" />
 
@@ -54,7 +55,7 @@
                         android:paddingLeft="20dp"
                         android:paddingTop="5dp"
                         android:paddingBottom="10dp"
-                        android:text="@string/nav_header_subtitle"
+                        android:text="Автор игротеки «Дети мира»\n\nНаучный руководитель международных сетевых лабораторий «Иновационные технологии в сфере поликультурного образования», эксперт федерального реестра научно-технической сферы РФ, Гутов, Германия"
                         android:textColor="#aaa" />
 
                 </LinearLayout>
@@ -70,7 +71,8 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="20dp"
                         android:paddingTop="10dp"
-                        android:text="@string/nav_header_title"
+                        android:textSize="18dp"
+                        android:text="Пуляевская Александра Михайловна"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                         android:textColor="#000" />
 
@@ -80,7 +82,7 @@
                         android:paddingLeft="20dp"
                         android:paddingTop="5dp"
                         android:paddingBottom="10dp"
-                        android:text="@string/nav_header_subtitle"
+                        android:text="Руководитель проекта\n\nРуководитель отдела информатизации образования ЧУ ДПО «Сибирский гуманитарно-технический институт»"
                         android:textColor="#aaa" />
 
                 </LinearLayout>
@@ -96,7 +98,8 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="20dp"
                         android:paddingTop="10dp"
-                        android:text="@string/nav_header_title"
+                        android:textSize="18dp"
+                        android:text="Фомин Марк Васильевич"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                         android:textColor="#000" />
 
@@ -106,69 +109,26 @@
                         android:paddingLeft="20dp"
                         android:paddingTop="5dp"
                         android:paddingBottom="10dp"
-                        android:text="@string/nav_header_subtitle"
+                        android:text="Разработчик\n\nСтудент группы ПКС-5 «Ангарского Промышленно-Экономического Техникума»"
                         android:textColor="#aaa" />
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cborder"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="10dp"
-                        android:text="@string/nav_header_title"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textColor="#000" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="10dp"
-                        android:text="@string/nav_header_subtitle"
-                        android:textColor="#aaa" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cborder"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="10dp"
-                        android:text="@string/nav_header_title"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textColor="#000" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="10dp"
-                        android:text="@string/nav_header_subtitle"
-                        android:textColor="#aaa" />
-
-                </LinearLayout>
             </LinearLayout>
         </ScrollView>
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:padding="5dp"
+                android:text="Год создания: 2019"
+                android:textColor="#000" />
 
             <TextView
                 android:id="@+id/textVersion"
@@ -179,7 +139,7 @@
                 android:text="#version"
                 android:textColor="#000" />
 
-        </LinearLayout>
+        </FrameLayout>
 
     </android.support.design.widget.AppBarLayout>
 
