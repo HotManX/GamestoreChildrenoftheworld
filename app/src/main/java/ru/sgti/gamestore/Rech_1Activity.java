@@ -47,6 +47,7 @@ public class Rech_1Activity extends AppCompatActivity {
         final ImageButton imBtn3 = findViewById(R.id.imBtn3);
         final ImageButton imBtn4 = findViewById(R.id.imBtn4);
 
+        final ImageView imageView1 = findViewById(R.id.imageView1);
         final ImageView imageView2 = findViewById(R.id.imageView2);
 
         Button Btn1 = findViewById(R.id.Btn1);
@@ -57,6 +58,8 @@ public class Rech_1Activity extends AppCompatActivity {
         final TextView text2 = findViewById(R.id.text2);
         final TextView text3 = findViewById(R.id.text3);
         final TextView text4 = findViewById(R.id.text4);
+        final TextView textView1 = findViewById(R.id.textView1);
+        final TextView textView2 = findViewById(R.id.textView2);
         final TextView textView3 = findViewById(R.id.textView3);
 
         for(int i=1;i<=8;i++){
@@ -71,6 +74,7 @@ public class Rech_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView2.setImageResource(imgsRech1.get(imgs1[1]-1));
+                imageView2.setTag(imgsRech1.get(imgs1[1]-1));
                 textView3.setText(get_country(imgs1[1]));
                 imBtn1.getLayoutParams().height = 0;
                 imBtn1.requestLayout();
@@ -82,6 +86,7 @@ public class Rech_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView2.setImageResource(imgsRech1.get(imgs1[2]-1));
+                imageView2.setTag(imgsRech1.get(imgs1[2]-1));
                 textView3.setText(get_country(imgs1[2]));
                 imBtn2.getLayoutParams().height = 0;
                 imBtn2.requestLayout();
@@ -93,6 +98,7 @@ public class Rech_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView2.setImageResource(imgsRech1.get(imgs1[3]-1));
+                imageView2.setTag(imgsRech1.get(imgs1[3]-1));
                 textView3.setText(get_country(imgs1[3]));
                 imBtn3.getLayoutParams().height = 0;
                 imBtn3.requestLayout();
@@ -104,10 +110,24 @@ public class Rech_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView2.setImageResource(imgsRech1.get(imgs1[4]-1));
+                imageView2.setTag(imgsRech1.get(imgs1[4]-1));
                 textView3.setText(get_country(imgs1[4]));
                 imBtn4.getLayoutParams().height = 0;
                 imBtn4.requestLayout();
                 text4.setText("");
+            }
+        });
+
+        Btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Rech_1Activity.this, Rech_1SaveActivity.class);
+                intent.putExtra("img1", (Integer)imageView1.getTag());
+                intent.putExtra("img2", (Integer)imageView2.getTag());
+                intent.putExtra("text1", textView1.getText());
+                intent.putExtra("text2", textView2.getText());
+                intent.putExtra("text3", textView3.getText());
+                startActivity(intent);
             }
         });
 
@@ -192,11 +212,13 @@ public class Rech_1Activity extends AppCompatActivity {
                     textView2.setText("День");
                     imgs2[0] = 1 + rnd.nextInt(20 - 1 + 1);
                     imageView1.setImageResource(imgsRech2.get(imgs2[0]-1));
+                    imageView1.setTag(imgsRech2.get(imgs2[0]-1));
                 }
                 else {
                     textView2.setText("Вечер");
                     imgs2[0] = 20 + rnd.nextInt(40 - 20 + 1);
                     imageView1.setImageResource(imgsRech2.get(imgs2[0]-1));
+                    imageView1.setTag(imgsRech2.get(imgs2[0]-1));
                 }
                 break;
             case 1:
@@ -205,11 +227,13 @@ public class Rech_1Activity extends AppCompatActivity {
                     textView2.setText("Ночь");
                     imgs2[0] = 1 + rnd.nextInt(20 - 1 + 1);
                     imageView1.setImageResource(imgsRech2.get(imgs2[0]-1));
+                    imageView1.setTag(imgsRech2.get(imgs2[0]-1));
                 }
                 else {
                     textView2.setText("Утро");
                     imgs2[0] = 20 + rnd.nextInt(40 - 20 + 1);
                     imageView1.setImageResource(imgsRech2.get(imgs2[0]-1));
+                    imageView1.setTag(imgsRech2.get(imgs2[0]-1));
                 }
                 break;
         }
@@ -266,10 +290,16 @@ public class Rech_1Activity extends AppCompatActivity {
                 finish();
                 return true;
 
-            case R.id.action_about:
-                Intent intent = new Intent(Rech_1Activity.this, AboutGameActivity.class);
+            case R.id.action_view:
+                Intent intent = new Intent(Rech_1Activity.this, ViewResultsActivity.class);
                 intent.putExtra("game", "rech");
                 startActivity(intent);
+                return true;
+
+            case R.id.action_about:
+                Intent about = new Intent(Rech_1Activity.this, AboutGameActivity.class);
+                about.putExtra("game", "rech");
+                startActivity(about);
                 return true;
 
             case R.id.action_exit:
