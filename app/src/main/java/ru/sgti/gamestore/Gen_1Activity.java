@@ -16,7 +16,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -71,9 +70,6 @@ public class Gen_1Activity extends AppCompatActivity {
         final ImageView imageView6 = findViewById(R.id.imageView6);
 
         Button Btn2 = findViewById(R.id.Btn2);
-        //imageView1.setImageResource(imgsGen1.get(1));
-        //imageView1.setTag(imgsGen1.get(1));
-          //imageView2.setImageResource((Integer)imageView1.getTag());
 
         final TextView textView5 = findViewById(R.id.textView5);
         final TextView textView6 = findViewById(R.id.textView6);
@@ -109,26 +105,32 @@ public class Gen_1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 if (idView[0] == 1) {
                     imageView1.setImageResource(imgsPikts1.get(imgs1[1][1] - 1));
+                    imageView1.setTag(imgsPikts1.get(imgs1[1][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 2) {
                     imageView2.setImageResource(imgsPikts1.get(imgs1[1][1] - 1));
+                    imageView2.setTag(imgsPikts1.get(imgs1[1][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 3) {
                     imageView3.setImageResource(imgsPikts1.get(imgs1[1][1] - 1));
+                    imageView3.setTag(imgsPikts1.get(imgs1[1][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 4) {
                     imageView4.setImageResource(imgsPikts1.get(imgs1[1][1] - 1));
+                    imageView4.setTag(imgsPikts1.get(imgs1[1][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 5) {
                     imageView5.setImageResource(imgsPikts1.get(imgs1[1][1] - 1));
+                    imageView5.setTag(imgsPikts1.get(imgs1[1][1] - 1));
                     idView[0] ++;
                 }
                 else {
                     imageView6.setImageResource(imgsPikts1.get(imgs1[1][1] - 1));
+                    imageView6.setTag(imgsPikts1.get(imgs1[1][1] - 1));
                     idView[0] = 1;
                 }
                 imBtn1.getLayoutParams().height = 0;
@@ -141,26 +143,32 @@ public class Gen_1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 if (idView[0] == 1) {
                     imageView1.setImageResource(imgsPikts1.get(imgs1[1][2] - 1));
+                    imageView1.setTag(imgsPikts1.get(imgs1[1][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 2) {
                     imageView2.setImageResource(imgsPikts1.get(imgs1[1][2] - 1));
+                    imageView2.setTag(imgsPikts1.get(imgs1[1][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 3) {
                     imageView3.setImageResource(imgsPikts1.get(imgs1[1][2] - 1));
+                    imageView3.setTag(imgsPikts1.get(imgs1[1][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 4) {
                     imageView4.setImageResource(imgsPikts1.get(imgs1[1][2] - 1));
+                    imageView4.setTag(imgsPikts1.get(imgs1[1][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 5) {
                     imageView5.setImageResource(imgsPikts1.get(imgs1[1][2] - 1));
+                    imageView5.setTag(imgsPikts1.get(imgs1[1][2] - 1));
                     idView[0] ++;
                 }
                 else {
                     imageView6.setImageResource(imgsPikts1.get(imgs1[1][2] - 1));
+                    imageView6.setTag(imgsPikts1.get(imgs1[1][2] - 1));
                     idView[0] = 1;
                 }
                 imBtn2.getLayoutParams().height = 0;
@@ -173,26 +181,32 @@ public class Gen_1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 if (idView[0] == 1) {
                     imageView1.setImageResource(imgsPikts2.get(imgs1[2][1] - 1));
+                    imageView1.setTag(imgsPikts2.get(imgs1[2][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 2) {
                     imageView2.setImageResource(imgsPikts2.get(imgs1[2][1] - 1));
+                    imageView2.setTag(imgsPikts2.get(imgs1[2][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 3) {
                     imageView3.setImageResource(imgsPikts2.get(imgs1[2][1] - 1));
+                    imageView3.setTag(imgsPikts2.get(imgs1[2][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 4) {
                     imageView4.setImageResource(imgsPikts2.get(imgs1[2][1] - 1));
+                    imageView4.setTag(imgsPikts2.get(imgs1[2][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 5) {
                     imageView5.setImageResource(imgsPikts2.get(imgs1[2][1] - 1));
+                    imageView5.setTag(imgsPikts2.get(imgs1[2][1] - 1));
                     idView[0] ++;
                 }
                 else {
                     imageView6.setImageResource(imgsPikts2.get(imgs1[2][1] - 1));
+                    imageView6.setTag(imgsPikts2.get(imgs1[2][1] - 1));
                     idView[0] = 1;
                 }
                 imBtn3.getLayoutParams().height = 0;
@@ -205,26 +219,32 @@ public class Gen_1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 if (idView[0] == 1) {
                     imageView1.setImageResource(imgsPikts2.get(imgs1[2][2] - 1));
+                    imageView1.setTag(imgsPikts2.get(imgs1[2][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 2) {
                     imageView2.setImageResource(imgsPikts2.get(imgs1[2][2] - 1));
+                    imageView2.setTag(imgsPikts2.get(imgs1[2][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 3) {
                     imageView3.setImageResource(imgsPikts2.get(imgs1[2][2] - 1));
+                    imageView3.setTag(imgsPikts2.get(imgs1[2][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 4) {
                     imageView4.setImageResource(imgsPikts2.get(imgs1[2][2] - 1));
+                    imageView4.setTag(imgsPikts2.get(imgs1[2][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 5) {
                     imageView5.setImageResource(imgsPikts2.get(imgs1[2][2] - 1));
+                    imageView5.setTag(imgsPikts2.get(imgs1[2][2] - 1));
                     idView[0] ++;
                 }
                 else {
                     imageView6.setImageResource(imgsPikts2.get(imgs1[2][2] - 1));
+                    imageView6.setTag(imgsPikts2.get(imgs1[2][2] - 1));
                     idView[0] = 1;
                 }
                 imBtn4.getLayoutParams().height = 0;
@@ -237,26 +257,32 @@ public class Gen_1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 if (idView[0] == 1) {
                     imageView1.setImageResource(imgsPM.get(imgs1[3][1] - 1));
+                    imageView1.setTag(imgsPM.get(imgs1[3][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 2) {
                     imageView2.setImageResource(imgsPM.get(imgs1[3][1] - 1));
+                    imageView2.setTag(imgsPM.get(imgs1[3][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 3) {
                     imageView3.setImageResource(imgsPM.get(imgs1[3][1] - 1));
+                    imageView3.setTag(imgsPM.get(imgs1[3][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 4) {
                     imageView4.setImageResource(imgsPM.get(imgs1[3][1] - 1));
+                    imageView4.setTag(imgsPM.get(imgs1[3][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 5) {
                     imageView5.setImageResource(imgsPM.get(imgs1[3][1] - 1));
+                    imageView5.setTag(imgsPM.get(imgs1[3][1] - 1));
                     idView[0] ++;
                 }
                 else {
                     imageView6.setImageResource(imgsPM.get(imgs1[3][1] - 1));
+                    imageView6.setTag(imgsPM.get(imgs1[3][1] - 1));
                     idView[0] = 1;
                 }
                 imBtn5.getLayoutParams().height = 0;
@@ -269,26 +295,32 @@ public class Gen_1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 if (idView[0] == 1) {
                     imageView1.setImageResource(imgsPM.get(imgs1[3][2] - 1));
+                    imageView1.setTag(imgsPM.get(imgs1[3][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 2) {
                     imageView2.setImageResource(imgsPM.get(imgs1[3][2] - 1));
+                    imageView2.setTag(imgsPM.get(imgs1[3][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 3) {
                     imageView3.setImageResource(imgsPM.get(imgs1[3][2] - 1));
+                    imageView3.setTag(imgsPM.get(imgs1[3][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 4) {
                     imageView4.setImageResource(imgsPM.get(imgs1[3][2] - 1));
+                    imageView4.setTag(imgsPM.get(imgs1[3][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 5) {
                     imageView5.setImageResource(imgsPM.get(imgs1[3][2] - 1));
+                    imageView5.setTag(imgsPM.get(imgs1[3][2] - 1));
                     idView[0] ++;
                 }
                 else {
                     imageView6.setImageResource(imgsPM.get(imgs1[3][2] - 1));
+                    imageView6.setTag(imgsPM.get(imgs1[3][2] - 1));
                     idView[0] = 1;
                 }
                 imBtn6.getLayoutParams().height = 0;
@@ -301,26 +333,32 @@ public class Gen_1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 if (idView[0] == 1) {
                     imageView1.setImageResource(imgsMK1.get(imgs2[1][1] - 1));
+                    imageView1.setTag(imgsMK1.get(imgs2[1][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 2) {
                     imageView2.setImageResource(imgsMK1.get(imgs2[1][1] - 1));
+                    imageView2.setTag(imgsMK1.get(imgs2[1][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 3) {
                     imageView3.setImageResource(imgsMK1.get(imgs2[1][1] - 1));
+                    imageView3.setTag(imgsMK1.get(imgs2[1][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 4) {
                     imageView4.setImageResource(imgsMK1.get(imgs2[1][1] - 1));
+                    imageView4.setTag(imgsMK1.get(imgs2[1][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 5) {
                     imageView5.setImageResource(imgsMK1.get(imgs2[1][1] - 1));
+                    imageView5.setTag(imgsMK1.get(imgs2[1][1] - 1));
                     idView[0] ++;
                 }
                 else {
                     imageView6.setImageResource(imgsMK1.get(imgs2[1][1] - 1));
+                    imageView6.setTag(imgsMK1.get(imgs2[1][1] - 1));
                     idView[0] = 1;
                 }
                 imBtn7.getLayoutParams().height = 0;
@@ -333,26 +371,32 @@ public class Gen_1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 if (idView[0] == 1) {
                     imageView1.setImageResource(imgsMK1.get(imgs2[1][2] - 1));
+                    imageView1.setTag(imgsMK1.get(imgs2[1][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 2) {
                     imageView2.setImageResource(imgsMK1.get(imgs2[1][2] - 1));
+                    imageView2.setTag(imgsMK1.get(imgs2[1][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 3) {
                     imageView3.setImageResource(imgsMK1.get(imgs2[1][2] - 1));
+                    imageView3.setTag(imgsMK1.get(imgs2[1][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 4) {
                     imageView4.setImageResource(imgsMK1.get(imgs2[1][2] - 1));
+                    imageView4.setTag(imgsMK1.get(imgs2[1][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 5) {
                     imageView5.setImageResource(imgsMK1.get(imgs2[1][2] - 1));
+                    imageView5.setTag(imgsMK1.get(imgs2[1][2] - 1));
                     idView[0] ++;
                 }
                 else {
                     imageView6.setImageResource(imgsMK1.get(imgs2[1][2] - 1));
+                    imageView6.setTag(imgsMK1.get(imgs2[1][2] - 1));
                     idView[0] = 1;
                 }
                 imBtn8.getLayoutParams().height = 0;
@@ -365,26 +409,32 @@ public class Gen_1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 if (idView[0] == 1) {
                     imageView1.setImageResource(imgsMK2.get(imgs2[2][1] - 1));
+                    imageView1.setTag(imgsMK2.get(imgs2[2][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 2) {
                     imageView2.setImageResource(imgsMK2.get(imgs2[2][1] - 1));
+                    imageView2.setTag(imgsMK2.get(imgs2[2][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 3) {
                     imageView3.setImageResource(imgsMK2.get(imgs2[2][1] - 1));
+                    imageView3.setTag(imgsMK2.get(imgs2[2][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 4) {
                     imageView4.setImageResource(imgsMK2.get(imgs2[2][1] - 1));
+                    imageView4.setTag(imgsMK2.get(imgs2[2][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 5) {
                     imageView5.setImageResource(imgsMK2.get(imgs2[2][1] - 1));
+                    imageView5.setTag(imgsMK2.get(imgs2[2][1] - 1));
                     idView[0] ++;
                 }
                 else {
                     imageView6.setImageResource(imgsMK2.get(imgs2[2][1] - 1));
+                    imageView6.setTag(imgsMK2.get(imgs2[2][1] - 1));
                     idView[0] = 1;
                 }
                 imBtn9.getLayoutParams().height = 0;
@@ -397,26 +447,32 @@ public class Gen_1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 if (idView[0] == 1) {
                     imageView1.setImageResource(imgsMK2.get(imgs2[2][2] - 1));
+                    imageView1.setTag(imgsMK2.get(imgs2[2][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 2) {
                     imageView2.setImageResource(imgsMK2.get(imgs2[2][2] - 1));
+                    imageView2.setTag(imgsMK2.get(imgs2[2][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 3) {
                     imageView3.setImageResource(imgsMK2.get(imgs2[2][2] - 1));
+                    imageView3.setTag(imgsMK2.get(imgs2[2][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 4) {
                     imageView4.setImageResource(imgsMK2.get(imgs2[2][2] - 1));
+                    imageView4.setTag(imgsMK2.get(imgs2[2][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 5) {
                     imageView5.setImageResource(imgsMK2.get(imgs2[2][2] - 1));
+                    imageView5.setTag(imgsMK2.get(imgs2[2][2] - 1));
                     idView[0] ++;
                 }
                 else {
                     imageView6.setImageResource(imgsMK2.get(imgs2[2][2] - 1));
+                    imageView6.setTag(imgsMK2.get(imgs2[2][2] - 1));
                     idView[0] = 1;
                 }
                 imBtn10.getLayoutParams().height = 0;
@@ -429,26 +485,32 @@ public class Gen_1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 if (idView[0] == 1) {
                     imageView1.setImageResource(imgsRech.get(imgs2[3][1] - 1));
+                    imageView1.setTag(imgsRech.get(imgs2[3][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 2) {
                     imageView2.setImageResource(imgsRech.get(imgs2[3][1] - 1));
+                    imageView2.setTag(imgsRech.get(imgs2[3][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 3) {
                     imageView3.setImageResource(imgsRech.get(imgs2[3][1] - 1));
+                    imageView3.setTag(imgsRech.get(imgs2[3][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 4) {
                     imageView4.setImageResource(imgsRech.get(imgs2[3][1] - 1));
+                    imageView4.setTag(imgsRech.get(imgs2[3][1] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 5) {
                     imageView5.setImageResource(imgsRech.get(imgs2[3][1] - 1));
+                    imageView5.setTag(imgsRech.get(imgs2[3][1] - 1));
                     idView[0] ++;
                 }
                 else {
                     imageView6.setImageResource(imgsRech.get(imgs2[3][1] - 1));
+                    imageView6.setTag(imgsRech.get(imgs2[3][1] - 1));
                     idView[0] = 1;
                 }
                 imBtn11.getLayoutParams().height = 0;
@@ -461,26 +523,32 @@ public class Gen_1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 if (idView[0] == 1) {
                     imageView1.setImageResource(imgsRech.get(imgs2[3][2] - 1));
+                    imageView1.setTag(imgsRech.get(imgs2[3][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 2) {
                     imageView2.setImageResource(imgsRech.get(imgs2[3][2] - 1));
+                    imageView2.setTag(imgsRech.get(imgs2[3][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 3) {
                     imageView3.setImageResource(imgsRech.get(imgs2[3][2] - 1));
+                    imageView3.setTag(imgsRech.get(imgs2[3][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 4) {
                     imageView4.setImageResource(imgsRech.get(imgs2[3][2] - 1));
+                    imageView4.setTag(imgsRech.get(imgs2[3][2] - 1));
                     idView[0] ++;
                 }
                 else if (idView[0] == 5) {
                     imageView5.setImageResource(imgsRech.get(imgs2[3][2] - 1));
+                    imageView5.setTag(imgsRech.get(imgs2[3][2] - 1));
                     idView[0] ++;
                 }
                 else {
                     imageView6.setImageResource(imgsRech.get(imgs2[3][2] - 1));
+                    imageView6.setTag(imgsRech.get(imgs2[3][2] - 1));
                     idView[0] = 1;
                 }
                 imBtn12.getLayoutParams().height = 0;
@@ -527,6 +595,20 @@ public class Gen_1Activity extends AppCompatActivity {
                 imBtn12.getLayoutParams().height = ViewGroup.LayoutParams.MATCH_PARENT;
                 imBtn12.requestLayout();
                 _M.Toast(Gen_1Activity.this,"Нижний ряд обновлен");
+            }
+        });
+
+        Btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Gen_1Activity.this, Gen_1SaveActivity.class);
+                intent.putExtra("img1", (Integer)imageView1.getTag());
+                intent.putExtra("img2", (Integer)imageView2.getTag());
+                intent.putExtra("img3", (Integer)imageView3.getTag());
+                intent.putExtra("img4", (Integer)imageView4.getTag());
+                intent.putExtra("img5", (Integer)imageView5.getTag());
+                intent.putExtra("img6", (Integer)imageView6.getTag());
+                startActivity(intent);
             }
         });
 
@@ -671,10 +753,16 @@ public class Gen_1Activity extends AppCompatActivity {
                 menu.findItem(R.id.action_show).setVisible(true);
                 return true;
 
-            case R.id.action_about:
-                Intent intent = new Intent(Gen_1Activity.this, AboutGameActivity.class);
+            case R.id.action_view:
+                Intent intent = new Intent(Gen_1Activity.this, ViewResultsActivity.class);
                 intent.putExtra("game", "gen");
                 startActivity(intent);
+                return true;
+
+            case R.id.action_about:
+                Intent about = new Intent(Gen_1Activity.this, AboutGameActivity.class);
+                about.putExtra("game", "gen");
+                startActivity(about);
                 return true;
 
             case R.id.action_exit:
