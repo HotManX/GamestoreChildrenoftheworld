@@ -7,7 +7,6 @@ import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,7 +16,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -83,6 +81,7 @@ public class TT_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsHeads.get(imgs1[1]-1));
+                imageView1.setTag(imgsHeads.get(imgs1[1]-1));
                 current_img[0] = imgs1[1];
                 imBtn1.getLayoutParams().height = 0;
                 imBtn1.requestLayout();
@@ -95,6 +94,7 @@ public class TT_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsHeads.get(imgs1[2]-1));
+                imageView1.setTag(imgsHeads.get(imgs1[2]-1));
                 current_img[0] = imgs1[2];
                 imBtn2.getLayoutParams().height = 0;
                 imBtn2.requestLayout();
@@ -107,6 +107,7 @@ public class TT_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsHeads.get(imgs1[3]-1));
+                imageView1.setTag(imgsHeads.get(imgs1[3]-1));
                 current_img[0] = imgs1[3];
                 imBtn3.getLayoutParams().height = 0;
                 imBtn3.requestLayout();
@@ -119,6 +120,7 @@ public class TT_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsHeads.get(imgs1[4]-1));
+                imageView1.setTag(imgsHeads.get(imgs1[4]-1));
                 current_img[0] = imgs1[4];
                 imBtn4.getLayoutParams().height = 0;
                 imBtn4.requestLayout();
@@ -131,6 +133,7 @@ public class TT_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsHeads.get(imgs1[5]-1));
+                imageView1.setTag(imgsHeads.get(imgs1[5]-1));
                 current_img[0] = imgs1[5];
                 imBtn5.getLayoutParams().height = 0;
                 imBtn5.requestLayout();
@@ -143,6 +146,7 @@ public class TT_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsHeads.get(imgs1[6]-1));
+                imageView1.setTag(imgsHeads.get(imgs1[6]-1));
                 current_img[0] = imgs1[6];
                 imBtn6.getLayoutParams().height = 0;
                 imBtn6.requestLayout();
@@ -155,6 +159,7 @@ public class TT_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView2.setImageResource(imgsBacks.get(imgs2[1]-1));
+                imageView2.setTag(imgsBacks.get(imgs2[1]-1));
                 current_img[1] = imgs1[1];
                 imBtn7.getLayoutParams().height = 0;
                 imBtn7.requestLayout();
@@ -167,6 +172,7 @@ public class TT_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView2.setImageResource(imgsBacks.get(imgs2[2]-1));
+                imageView2.setTag(imgsBacks.get(imgs2[2]-1));
                 current_img[1] = imgs1[2];
                 imBtn8.getLayoutParams().height = 0;
                 imBtn8.requestLayout();
@@ -179,6 +185,7 @@ public class TT_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView2.setImageResource(imgsBacks.get(imgs2[3]-1));
+                imageView2.setTag(imgsBacks.get(imgs2[3]-1));
                 current_img[1] = imgs1[3];
                 imBtn9.getLayoutParams().height = 0;
                 imBtn9.requestLayout();
@@ -191,6 +198,7 @@ public class TT_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView2.setImageResource(imgsBacks.get(imgs2[4]-1));
+                imageView2.setTag(imgsBacks.get(imgs2[4]-1));
                 current_img[1] = imgs1[4];
                 imBtn10.getLayoutParams().height = 0;
                 imBtn10.requestLayout();
@@ -203,6 +211,7 @@ public class TT_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView2.setImageResource(imgsBacks.get(imgs2[5]-1));
+                imageView2.setTag(imgsBacks.get(imgs2[5]-1));
                 current_img[1] = imgs1[5];
                 imBtn11.getLayoutParams().height = 0;
                 imBtn11.requestLayout();
@@ -215,6 +224,7 @@ public class TT_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView2.setImageResource(imgsBacks.get(imgs2[6]-1));
+                imageView2.setTag(imgsBacks.get(imgs2[6]-1));
                 current_img[1] = imgs1[6];
                 imBtn12.getLayoutParams().height = 0;
                 imBtn12.requestLayout();
@@ -420,6 +430,17 @@ public class TT_1Activity extends AppCompatActivity {
                     textView2.setText("Попугай");
                 }
             }
+
+        });
+
+        Btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TT_1Activity.this, TT_1SaveActivity.class);
+                intent.putExtra("img1", (Integer)imageView1.getTag());
+                intent.putExtra("img2", (Integer)imageView2.getTag());
+                startActivity(intent);
+            }
         });
 
         rnd_imgs1();
@@ -550,10 +571,16 @@ public class TT_1Activity extends AppCompatActivity {
                 menu.findItem(R.id.action_show).setVisible(true);
                 return true;
 
-            case R.id.action_about:
-                Intent intent = new Intent(TT_1Activity.this, AboutGameActivity.class);
+            case R.id.action_view:
+                Intent intent = new Intent(TT_1Activity.this, ViewResultsActivity.class);
                 intent.putExtra("game", "tt");
                 startActivity(intent);
+                return true;
+
+            case R.id.action_about:
+                Intent about = new Intent(TT_1Activity.this, AboutGameActivity.class);
+                about.putExtra("game", "tt");
+                startActivity(about);
                 return true;
 
             case R.id.action_exit:
