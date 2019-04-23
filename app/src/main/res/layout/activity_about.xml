@@ -109,8 +109,22 @@
                         android:paddingLeft="20dp"
                         android:paddingTop="5dp"
                         android:paddingBottom="10dp"
-                        android:text="Разработчик\n\nСтудент группы ПКС-5 «Ангарского Промышленно-Экономического Техникума»"
+                        android:text="Разработчик\n\nСтудент группы ПКС-5 ГПБОУ ИО «Ангарский промышленно-экономического техникум»"
                         android:textColor="#aaa" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#fff">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ico"/>
 
                 </LinearLayout>
 
