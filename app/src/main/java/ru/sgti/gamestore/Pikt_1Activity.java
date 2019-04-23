@@ -15,7 +15,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -42,18 +41,18 @@ public class Pikt_1Activity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        final ImageButton imBtn1 = (ImageButton) findViewById(R.id.imBtn1);
-        final ImageButton imBtn2 = (ImageButton) findViewById(R.id.imBtn2);
-        final ImageButton imBtn3 = (ImageButton) findViewById(R.id.imBtn3);
-        final ImageButton imBtn4 = (ImageButton) findViewById(R.id.imBtn4);
-        final ImageButton imBtn5 = (ImageButton) findViewById(R.id.imBtn5);
-        final ImageButton imBtn6 = (ImageButton) findViewById(R.id.imBtn6);
-        final ImageButton imBtn7 = (ImageButton) findViewById(R.id.imBtn7);
-        final ImageButton imBtn8 = (ImageButton) findViewById(R.id.imBtn8);
-        final ImageButton imBtn9 = (ImageButton) findViewById(R.id.imBtn9);
-        final ImageButton imBtn10 = (ImageButton) findViewById(R.id.imBtn10);
-        final ImageButton imBtn11 = (ImageButton) findViewById(R.id.imBtn11);
-        final ImageButton imBtn12 = (ImageButton) findViewById(R.id.imBtn12);
+        final ImageButton imBtn1 = findViewById(R.id.imBtn1);
+        final ImageButton imBtn2 = findViewById(R.id.imBtn2);
+        final ImageButton imBtn3 = findViewById(R.id.imBtn3);
+        final ImageButton imBtn4 = findViewById(R.id.imBtn4);
+        final ImageButton imBtn5 = findViewById(R.id.imBtn5);
+        final ImageButton imBtn6 = findViewById(R.id.imBtn6);
+        final ImageButton imBtn7 = findViewById(R.id.imBtn7);
+        final ImageButton imBtn8 = findViewById(R.id.imBtn8);
+        final ImageButton imBtn9 = findViewById(R.id.imBtn9);
+        final ImageButton imBtn10 = findViewById(R.id.imBtn10);
+        final ImageButton imBtn11 = findViewById(R.id.imBtn11);
+        final ImageButton imBtn12 = findViewById(R.id.imBtn12);
 
         final ImageButton imBtnR1 = findViewById(R.id.imBtnR1);
         final ImageButton imBtnR2 = findViewById(R.id.imBtnR2);
@@ -70,13 +69,11 @@ public class Pikt_1Activity extends AppCompatActivity {
             imgsPikts2.add(getResources().getIdentifier("pikt_pikts2_"+i, "drawable", getPackageName()));
         }
 
-        final int[] current_img = new int[1];
-
         imBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPikts1.get(imgs1[1]-1));
-                current_img[0] = imgs1[1];
+                imageView1.setTag(imgsPikts1.get(imgs1[1]-1));
                 imBtn1.getLayoutParams().height = 0;
                 imBtn1.requestLayout();
             }
@@ -86,7 +83,7 @@ public class Pikt_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPikts1.get(imgs1[2]-1));
-                current_img[0] = imgs1[2];
+                imageView1.setTag(imgsPikts1.get(imgs1[2]-1));
                 imBtn2.getLayoutParams().height = 0;
                 imBtn2.requestLayout();
             }
@@ -96,7 +93,7 @@ public class Pikt_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPikts1.get(imgs1[3]-1));
-                current_img[0] = imgs1[3];
+                imageView1.setTag(imgsPikts1.get(imgs1[3]-1));
                 imBtn3.getLayoutParams().height = 0;
                 imBtn3.requestLayout();
             }
@@ -106,7 +103,7 @@ public class Pikt_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPikts1.get(imgs1[4]-1));
-                current_img[0] = imgs1[4];
+                imageView1.setTag(imgsPikts1.get(imgs1[4]-1));
                 imBtn4.getLayoutParams().height = 0;
                 imBtn4.requestLayout();
             }
@@ -116,7 +113,7 @@ public class Pikt_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPikts1.get(imgs1[5]-1));
-                current_img[0] = imgs1[5];
+                imageView1.setTag(imgsPikts1.get(imgs1[5]-1));
                 imBtn5.getLayoutParams().height = 0;
                 imBtn5.requestLayout();
             }
@@ -126,7 +123,7 @@ public class Pikt_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPikts1.get(imgs1[6]-1));
-                current_img[0] = imgs1[6];
+                imageView1.setTag(imgsPikts1.get(imgs1[6]-1));
                 imBtn6.getLayoutParams().height = 0;
                 imBtn6.requestLayout();
             }
@@ -136,7 +133,7 @@ public class Pikt_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPikts2.get(imgs2[1]-1));
-                current_img[0] = imgs2[1];
+                imageView1.setTag(imgsPikts2.get(imgs2[1]-1));
                 imBtn7.getLayoutParams().height = 0;
                 imBtn7.requestLayout();
             }
@@ -146,7 +143,7 @@ public class Pikt_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPikts2.get(imgs2[2]-1));
-                current_img[0] = imgs2[2];
+                imageView1.setTag(imgsPikts2.get(imgs2[2]-1));
                 imBtn8.getLayoutParams().height = 0;
                 imBtn8.requestLayout();
             }
@@ -156,7 +153,7 @@ public class Pikt_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPikts2.get(imgs2[3]-1));
-                current_img[0] = imgs2[3];
+                imageView1.setTag(imgsPikts2.get(imgs2[3]-1));
                 imBtn9.getLayoutParams().height = 0;
                 imBtn9.requestLayout();
             }
@@ -166,7 +163,7 @@ public class Pikt_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPikts2.get(imgs2[4]-1));
-                current_img[0] = imgs2[4];
+                imageView1.setTag(imgsPikts2.get(imgs2[4]-1));
                 imBtn10.getLayoutParams().height = 0;
                 imBtn10.requestLayout();
             }
@@ -176,7 +173,7 @@ public class Pikt_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPikts2.get(imgs2[5]-1));
-                current_img[0] = imgs2[5];
+                imageView1.setTag(imgsPikts2.get(imgs2[5]-1));
                 imBtn11.getLayoutParams().height = 0;
                 imBtn11.requestLayout();
             }
@@ -186,7 +183,7 @@ public class Pikt_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPikts2.get(imgs2[6]-1));
-                current_img[0] = imgs2[6];
+                imageView1.setTag(imgsPikts2.get(imgs2[6]-1));
                 imBtn12.getLayoutParams().height = 0;
                 imBtn12.requestLayout();
             }
@@ -231,6 +228,15 @@ public class Pikt_1Activity extends AppCompatActivity {
                 imBtn12.getLayoutParams().height = ViewGroup.LayoutParams.MATCH_PARENT;
                 imBtn12.requestLayout();
                 _M.Toast(Pikt_1Activity.this,"Нижний ряд обновлен");
+            }
+        });
+
+        Btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Pikt_1Activity.this, Pikt_1SaveActivity.class);
+                intent.putExtra("img1", (Integer)imageView1.getTag());
+                startActivity(intent);
             }
         });
 
@@ -362,10 +368,16 @@ public class Pikt_1Activity extends AppCompatActivity {
                 menu.findItem(R.id.action_show).setVisible(true);
                 return true;
 
-            case R.id.action_about:
-                Intent intent = new Intent(Pikt_1Activity.this, AboutGameActivity.class);
+            case R.id.action_view:
+                Intent intent = new Intent(Pikt_1Activity.this, ViewResultsActivity.class);
                 intent.putExtra("game", "pikt");
                 startActivity(intent);
+                return true;
+
+            case R.id.action_about:
+                Intent about = new Intent(Pikt_1Activity.this, AboutGameActivity.class);
+                about.putExtra("game", "pikt");
+                startActivity(about);
                 return true;
 
             case R.id.action_exit:
