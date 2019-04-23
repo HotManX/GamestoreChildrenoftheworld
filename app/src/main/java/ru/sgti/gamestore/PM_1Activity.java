@@ -15,7 +15,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -65,13 +64,11 @@ public class PM_1Activity extends AppCompatActivity {
             imgsPM.add(getResources().getIdentifier("pm_"+i, "drawable", getPackageName()));
         }
 
-        final int[] current_img = new int[1];
-
         imBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPM.get(imgs1[1]-1));
-                current_img[0] = imgs1[1];
+                imageView1.setTag(imgsPM.get(imgs1[1]-1));
                 imBtn1.getLayoutParams().height = 0;
                 imBtn1.requestLayout();
             }
@@ -81,7 +78,7 @@ public class PM_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPM.get(imgs1[2]-1));
-                current_img[0] = imgs1[2];
+                imageView1.setTag(imgsPM.get(imgs1[2]-1));
                 imBtn2.getLayoutParams().height = 0;
                 imBtn2.requestLayout();
             }
@@ -91,7 +88,7 @@ public class PM_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPM.get(imgs1[3]-1));
-                current_img[0] = imgs1[3];
+                imageView1.setTag(imgsPM.get(imgs1[3]-1));
                 imBtn3.getLayoutParams().height = 0;
                 imBtn3.requestLayout();
             }
@@ -101,7 +98,7 @@ public class PM_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPM.get(imgs1[4]-1));
-                current_img[0] = imgs1[4];
+                imageView1.setTag(imgsPM.get(imgs1[4]-1));
                 imBtn4.getLayoutParams().height = 0;
                 imBtn4.requestLayout();
             }
@@ -111,7 +108,7 @@ public class PM_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPM.get(imgs1[5]-1));
-                current_img[0] = imgs1[5];
+                imageView1.setTag(imgsPM.get(imgs1[5]-1));
                 imBtn5.getLayoutParams().height = 0;
                 imBtn5.requestLayout();
             }
@@ -121,7 +118,7 @@ public class PM_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPM.get(imgs1[6]-1));
-                current_img[0] = imgs1[6];
+                imageView1.setTag(imgsPM.get(imgs1[6]-1));
                 imBtn6.getLayoutParams().height = 0;
                 imBtn6.requestLayout();
             }
@@ -131,7 +128,7 @@ public class PM_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPM.get(imgs2[1]-1));
-                current_img[0] = imgs2[1];
+                imageView1.setTag(imgsPM.get(imgs2[1]-1));
                 imBtn7.getLayoutParams().height = 0;
                 imBtn7.requestLayout();
             }
@@ -141,7 +138,7 @@ public class PM_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPM.get(imgs2[2]-1));
-                current_img[0] = imgs2[2];
+                imageView1.setTag(imgsPM.get(imgs2[2]-1));
                 imBtn8.getLayoutParams().height = 0;
                 imBtn8.requestLayout();
             }
@@ -151,7 +148,7 @@ public class PM_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPM.get(imgs2[3]-1));
-                current_img[0] = imgs2[3];
+                imageView1.setTag(imgsPM.get(imgs2[3]-1));
                 imBtn9.getLayoutParams().height = 0;
                 imBtn9.requestLayout();
             }
@@ -161,7 +158,7 @@ public class PM_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPM.get(imgs2[4]-1));
-                current_img[0] = imgs2[4];
+                imageView1.setTag(imgsPM.get(imgs2[4]-1));
                 imBtn10.getLayoutParams().height = 0;
                 imBtn10.requestLayout();
             }
@@ -171,7 +168,7 @@ public class PM_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPM.get(imgs2[5]-1));
-                current_img[0] = imgs2[5];
+                imageView1.setTag(imgsPM.get(imgs2[5]-1));
                 imBtn11.getLayoutParams().height = 0;
                 imBtn11.requestLayout();
             }
@@ -181,7 +178,7 @@ public class PM_1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 imageView1.setImageResource(imgsPM.get(imgs2[6]-1));
-                current_img[0] = imgs2[6];
+                imageView1.setTag(imgsPM.get(imgs2[6]-1));
                 imBtn12.getLayoutParams().height = 0;
                 imBtn12.requestLayout();
             }
@@ -226,6 +223,15 @@ public class PM_1Activity extends AppCompatActivity {
                 imBtn12.getLayoutParams().height = ViewGroup.LayoutParams.MATCH_PARENT;
                 imBtn12.requestLayout();
                 _M.Toast(PM_1Activity.this,"Нижний ряд обновлен");
+            }
+        });
+
+        Btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PM_1Activity.this, PM_1SaveActivity.class);
+                intent.putExtra("img1", (Integer)imageView1.getTag());
+                startActivity(intent);
             }
         });
 
@@ -357,10 +363,16 @@ public class PM_1Activity extends AppCompatActivity {
                 menu.findItem(R.id.action_show).setVisible(true);
                 return true;
 
-            case R.id.action_about:
-                Intent intent = new Intent(PM_1Activity.this, AboutGameActivity.class);
+            case R.id.action_view:
+                Intent intent = new Intent(PM_1Activity.this, ViewResultsActivity.class);
                 intent.putExtra("game", "pm");
                 startActivity(intent);
+                return true;
+
+            case R.id.action_about:
+                Intent about = new Intent(PM_1Activity.this, AboutGameActivity.class);
+                about.putExtra("game", "pm");
+                startActivity(about);
                 return true;
 
             case R.id.action_exit:
