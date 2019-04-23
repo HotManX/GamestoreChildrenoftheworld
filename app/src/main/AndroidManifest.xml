@@ -3,9 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="ru.sgti.gamestore">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ico"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
@@ -42,6 +45,27 @@
         <activity
             android:name=".AboutGameActivity"
             android:label="Об игре" />
+        <activity
+            android:name=".TT_1SaveActivity"
+            android:label="Описание" />
+        <activity
+            android:name=".ViewResultsActivity"
+            android:label="Просмотр результатов" />
+        <activity
+            android:name=".Pikt_1SaveActivity"
+            android:label="Просмотр результатов" />
+        <activity
+            android:name=".PM_1SaveActivity"
+            android:label="Просмотр результатов" />
+        <activity
+            android:name=".MK_1SaveActivity"
+            android:label="Просмотр результатов" />
+        <activity
+            android:name=".Gen_1SaveActivity"
+            android:label="Просмотр результатов" />
+        <activity
+            android:name=".Rech_1SaveActivity"
+            android:label="Просмотр результатов" />
     </application>
 
 </manifest>

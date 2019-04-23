@@ -55,12 +55,12 @@ public class _MainActivity extends AppCompatActivity
             }
         });*/
 
-        ImageButton ttBtn = (ImageButton) findViewById(R.id.imageButtonTt);
-        ImageButton piktBtn = (ImageButton) findViewById(R.id.imageButtonPikt);
-        ImageButton pmBtn = (ImageButton) findViewById(R.id.imageButtonPm);
-        ImageButton mkBtn = (ImageButton) findViewById(R.id.imageButtonMk);
-        ImageButton rechBtn = (ImageButton) findViewById(R.id.imageButtonRech);
-        ImageButton genBtn = (ImageButton) findViewById(R.id.imageButtonGen);
+        ImageButton ttBtn = findViewById(R.id.imageButtonTt);
+        ImageButton piktBtn = findViewById(R.id.imageButtonPikt);
+        ImageButton pmBtn = findViewById(R.id.imageButtonPm);
+        ImageButton mkBtn = findViewById(R.id.imageButtonMk);
+        ImageButton rechBtn = findViewById(R.id.imageButtonRech);
+        ImageButton genBtn = findViewById(R.id.imageButtonGen);
 
         buttonEffect(ttBtn);
         buttonEffect(piktBtn);
@@ -153,7 +153,6 @@ public class _MainActivity extends AppCompatActivity
             builder.setPositiveButton("Нет", null);
             builder.setNegativeButton("Да", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
-                    //super.onBackPressed();
                     finish();
                 }
             });
@@ -171,7 +170,6 @@ public class _MainActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-
             case R.id.action_about:
                 Intent about = new Intent(_MainActivity.this, AboutActivity.class);
                 startActivity(about);
@@ -189,9 +187,7 @@ public class _MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         switch (item.getItemId()) {
-
             case R.id.nav_tt:
                 tt();
                 break;
@@ -251,8 +247,7 @@ public class _MainActivity extends AppCompatActivity
         final Toast toast = Toast.makeText(ctx, text, Toast.LENGTH_SHORT);
         toast.show();
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 toast.cancel();

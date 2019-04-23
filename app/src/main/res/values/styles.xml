@@ -17,4 +17,9 @@
         <item name="colorControlHighlight">#aaa</item>
     </style>
 
+    <style name="RadioButtonStyle" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textColorSecondary">@color/colorPrimary</item>
+    </style>
+
 </resources>
